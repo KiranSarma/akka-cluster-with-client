@@ -7,7 +7,7 @@ import albgorski.akka.protocol.{RequestHello, RequestHelloScalaVersion}
 
 object AkkaScalaClusterClient {
   def main(args: Array[String]): Unit = {
-    val config = ConfigFactory.load()
+    val config = ConfigFactory.parseString("akka.remote.netty.tcp.port=4551").withFallback(ConfigFactory.load())
     val system = ActorSystem("ScalaClusterClientSystem", config)
 
     val initialContacts = Set(

@@ -13,8 +13,8 @@ val project = Project(
     javacOptions in Compile ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint:unchecked", "-Xlint:deprecation"),
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-cluster"                 % akkaVersion,
-      "com.typesafe.akka" %% "akka-contrib"                 % akkaVersion,
       "com.typesafe.akka" %% "akka-multi-node-testkit"      % akkaVersion,
+      "com.typesafe.akka" %% "akka-contrib"                 % akkaVersion,
       "albgorski"         %% "akka-mini-cluster-protocol"   % "1.0"
 	  ),
     javaOptions in run ++= Seq(
