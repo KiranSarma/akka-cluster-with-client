@@ -12,6 +12,8 @@ class Greeter extends Actor with ActorLogging {
       log.info(s">>> RequestHello $from")
     case RequestHelloScalaVersion(from, year) =>
       log.info(s">>> RequestHelloScalaVersion $from, $year")
+    case any @ _ =>
+      log.info(s">>> any $any")
   }
 
 }
